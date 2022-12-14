@@ -1,15 +1,13 @@
-
 import {
   BrowserRouter,
-  Switch,
   Route,
-  Link,
-  useRouteMatch,
-  Router,
+  Routes
 } from "react-router-dom";
 import React from 'react'
 
-
+import "./pages/account/account.css"
+import "./pages/details/details.css"
+import "./pages/login/login.css"
 
 import { Footer } from "./components/footer/Footer";
 import { Header } from "./components/header/Header";
@@ -27,15 +25,16 @@ const App = () => {
   return (
     <>
       {isLoggIn && (
-        <Router>
+        <BrowserRouter>
           <Header />
-          <Switch>
-            <Route exact path='/' component={Home} />
-            <Route exact path='/regsiter' component={Register} />
-            <Route exact path='/account' component={Account} />
-          </Switch>
+          <Routes>
+            <Route  path='/' element={<Home />} />
+            <Route  path='/register' element={<Register />} />
+            <Route  path='/account' element={<Account />} />
+          </Routes>
           <Footer />
-        </Router>
+          </BrowserRouter>
+  
       )}
       {!isLoggIn && <Login />}
     </>

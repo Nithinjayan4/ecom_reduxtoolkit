@@ -31,7 +31,7 @@ export const CartItems = ({ id, cover, name, price, quantity, totalPrice }) => {
                 <button className='plus' onClick={incCartitems}>
                   <AiOutlinePlus />
                 </button>
-                <button className='num'>1{quantity}</button>
+                <button className='num'>{quantity}</button>
                 <button className='minus' onClick={descCartitems}>
                   <AiOutlineMinus />
                 </button>

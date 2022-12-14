@@ -1,5 +1,5 @@
 import React from "react"
-import "./login.css"
+// import "../login/login.css"
 import back from "../../assets/images/my-account.jpg"
 import { useDispatch } from "react-redux"
 import { authActions } from "../../store/authSlice"
